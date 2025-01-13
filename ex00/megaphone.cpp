@@ -3,10 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 23:19:28 by nisi              #+#    #+#             */
-/*   Updated: 2025/01/12 23:19:29 by nisi             ###   ########.fr       */
+/*   Updated: 2025/01/13 17:20:54 by timanish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+#include <cctype>
+
+int main(int argc, char **argv)
+{
+	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+	else
+	{
+		for (int i = 1; i < argc; i++)
+		{
+			for (int j = 0; argv[i][j]; j++)
+				std::cout << (char)toupper(argv[i][j]);
+		}
+		std::cout << std::endl;
+	}
+	return 0;
+}
