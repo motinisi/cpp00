@@ -5,15 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/12 23:01:35 by nisi              #+#    #+#              #
-#    Updated: 2025/04/10 15:29:11 by nisi             ###   ########.fr        #
+#    Created: 2025/04/10 15:29:33 by nisi              #+#    #+#              #
+#    Updated: 2025/04/10 15:34:06 by nisi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
-CXX = clang++
+NAME = PhoneBook
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = megaphone.cpp\
+SRC = main.cpp \
+	contact.cpp \
+	PhoneBook.cpp \
+
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

@@ -3,34 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:22:15 by timanish          #+#    #+#             */
-/*   Updated: 2025/01/14 16:50:45 by timanish         ###   ########.fr       */
+/*   Updated: 2025/04/10 15:46:28 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <iostream>
+#include <string>
 
 int main()
 {
-	PhoneBook	phonebook;
-	std::string	command;
+    PhoneBook phoneBook;
+    std::string command;
 
-	while(1)
+    std::cout << "=== My Awesome PhoneBook ===" << std::endl;
+
+    while (true)
 	{
-		std::cout << "enter command (ADD, SEARCH, EXIT)";
-		std::getline(std::cin, command);
-		if (command == "ADD")
-			phonebook.addContact();
-		else if (command == "SEARCH")
-			phonebook.searchContact();
-		else if (command == "EXIT")
-			break;
-		else
-			std::cout << "Invalid command" << std::endl;
-	}
+        std::cout << "\nコマンドを入力してください（ADD, SEARCH, EXIT）: ";
+        std::getline(std::cin, command);
 
-	
-	return (0);
+        if (std::cin.eof())
+		{
+            std::cout << "\n入力が終了されました。終了します。" << std::endl;
+            break;
+        }
+
+        if (command == "ADD")
+            phoneBook.addContact();
+		else if (command == "SEARCH")
+            phoneBook.searchContact();
+		else if (command == "EXIT")
+		{
+            std::cout << "終了" << std::endl;
+            break;
+        }
+		else
+            std::cout << "無効なコマンドです。" << std::endl;
+    }
+
+    return 0;
 }
