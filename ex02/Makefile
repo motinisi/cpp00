@@ -5,15 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/12 23:01:35 by nisi              #+#    #+#              #
-#    Updated: 2025/04/15 15:21:24 by nisi             ###   ########.fr        #
+#    Created: 2025/04/15 15:37:59 by nisi              #+#    #+#              #
+#    Updated: 2025/04/15 17:24:41 by nisi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = Account
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = megaphone.cpp\
+SRC = Account.cpp\
+	tests.cpp\
+
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

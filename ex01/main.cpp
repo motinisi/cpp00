@@ -6,7 +6,7 @@
 /*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:22:15 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/10 15:46:28 by nisi             ###   ########.fr       */
+/*   Updated: 2025/04/11 23:26:54 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ int main()
 
     while (true)
 	{
-        std::cout << "\nコマンドを入力してください（ADD, SEARCH, EXIT）: ";
+        std::cout << "\nコマンドを入力（ADD, SEARCH, EXIT）: ";
         std::getline(std::cin, command);
 
         if (std::cin.eof())
 		{
-            std::cout << "\n入力が終了されました。終了します。" << std::endl;
+            std::cout << "\nEOF" << std::endl;
             break;
         }
 
@@ -38,11 +38,11 @@ int main()
             phoneBook.searchContact();
 		else if (command == "EXIT")
 		{
-            std::cout << "終了" << std::endl;
+            std::cout << "EXIT" << std::endl;
             break;
         }
 		else
-            std::cout << "無効なコマンドです。" << std::endl;
+            std::cout << "ADD or SEARCH or EXIT" << std::endl;
     }
 
     return 0;
