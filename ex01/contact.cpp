@@ -6,13 +6,24 @@
 /*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:16:27 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/29 15:14:09 by nisi             ###   ########.fr       */
+/*   Updated: 2025/04/29 16:22:31 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
 #include <iostream>
 #include <iomanip>
+
+bool isValidPhoneNumber(const std::string& phoneNumber)
+{
+    for (size_t i = 0; i < phoneNumber.length(); ++i)
+    {
+        char c = phoneNumber[i];
+        if (!std::isdigit(c) && c != '+' && c != '-' && c != ' ')
+            return false;
+    }
+    return true;
+}
 
 int Contact::setContact() 
 {
@@ -31,6 +42,11 @@ int Contact::setContact()
         phoneNumber.empty() || darkestSecret.empty())
     {
         std::cout << "\n入力が正しくありません。" << std::endl;
+        return ERROR;
+    }
+    if (!isValidPhoneNumber(phoneNumber))
+    {
+        std::cout << "\n電話番号が正しくありません。" << std::endl;
         return ERROR;
     }
     return 0;
