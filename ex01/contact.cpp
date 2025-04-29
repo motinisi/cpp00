@@ -6,7 +6,7 @@
 /*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:16:27 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/10 15:44:27 by nisi             ###   ########.fr       */
+/*   Updated: 2025/04/29 15:14:09 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <iomanip>
 
-void Contact::setContact() 
+int Contact::setContact() 
 {
     std::cout << "First name: ";
     std::getline(std::cin, firstName);
@@ -28,9 +28,12 @@ void Contact::setContact()
     std::getline(std::cin, darkestSecret);
 
     if (firstName.empty() || lastName.empty() || nickname.empty() ||
-        phoneNumber.empty() || darkestSecret.empty()) {
-        std::cout << "Error: All fields must be filled!" << std::endl;
+        phoneNumber.empty() || darkestSecret.empty())
+    {
+        std::cout << "\n入力が正しくありません。" << std::endl;
+        return ERROR;
     }
+    return 0;
 }
 
 static std::string formatField(const std::string& str)

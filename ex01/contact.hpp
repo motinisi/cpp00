@@ -6,7 +6,7 @@
 /*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:16:32 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/10 15:35:56 by nisi             ###   ########.fr       */
+/*   Updated: 2025/04/29 15:07:56 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <string>
+
+#define ERROR 1
 
 class Contact {
 private:
@@ -24,7 +26,7 @@ private:
     std::string darkestSecret;
 
 public:
-    void setContact();
+    int setContact();
     void displayShort(int index) const;
     void displayFull() const;
 };

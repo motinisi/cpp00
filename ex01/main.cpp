@@ -6,7 +6,7 @@
 /*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:22:15 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/11 23:26:54 by nisi             ###   ########.fr       */
+/*   Updated: 2025/04/29 15:42:35 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int main()
             std::cout << "\nEOF" << std::endl;
             break;
         }
-
         if (command == "ADD")
             phoneBook.addContact();
 		else if (command == "SEARCH")

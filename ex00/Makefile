@@ -6,14 +6,14 @@
 #    By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/12 23:01:35 by nisi              #+#    #+#              #
-#    Updated: 2025/04/15 15:21:24 by nisi             ###   ########.fr        #
+#    Updated: 2025/04/29 14:27:40 by nisi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = megaphone.cpp\
+SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

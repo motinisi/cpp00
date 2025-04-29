@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 23:19:28 by nisi              #+#    #+#             */
-/*   Updated: 2025/01/13 17:20:54 by timanish         ###   ########.fr       */
+/*   Updated: 2025/04/29 14:26:36 by nisi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int main(int argc, char **argv)
 		for (int i = 1; i < argc; i++)
 		{
 			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char)toupper(argv[i][j]);
+				std::cout << static_cast<char>(std::toupper(
+					static_cast<unsigned char>(argv[i][j])));
 		}
 		std::cout << std::endl;
 	}
