@@ -6,7 +6,7 @@
 /*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:16:27 by timanish          #+#    #+#             */
-/*   Updated: 2025/07/07 22:20:15 by timanish         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:38:27 by timanish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,15 @@ static std::string formatField(const std::string& str)
     if (str.length() > 10)
         return str.substr(0, 9) + ".";
     else
-        return std::string(10 - str.length(), ' ') + str;
+        return str;
 }
 
 void Contact::displayShort(int index) const
 {
     std::cout << std::setw(10) << index << "|"
-              << formatField(firstName) << "|"
-              << formatField(lastName) << "|"
-              << formatField(nickname) << std::endl;
+              << std::setw(10) << formatField(firstName) << "|"
+              << std::setw(10) << formatField(lastName) << "|"
+              << std::setw(10) << formatField(nickname) << std::endl;
 }
 
 void Contact::displayFull() const
