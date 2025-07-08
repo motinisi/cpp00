@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 16:22:15 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/29 15:42:35 by nisi             ###   ########.fr       */
+/*   Updated: 2025/07/07 21:11:23 by timanish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ int main()
     PhoneBook phoneBook;
     std::string command;
 
-    std::cout << "=== My Awesome PhoneBook ===" << std::endl;
-
+    // std::cout << "=== My Awesome PhoneBook ===" << std::endl;
     while (true)
-	{
+	{        
         std::cout << "\nコマンドを入力（ADD, SEARCH, EXIT）: ";
         std::getline(std::cin, command);
-
         if (std::cin.eof())
 		{
             std::cout << "\nEOF" << std::endl;

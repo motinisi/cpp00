@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: timanish <timanish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:16:27 by timanish          #+#    #+#             */
-/*   Updated: 2025/04/29 16:22:31 by nisi             ###   ########.fr       */
+/*   Updated: 2025/07/07 22:20:15 by timanish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include <iostream>
 #include <iomanip>
 
-bool isValidPhoneNumber(const std::string& phoneNumber)
+int isValidPhoneNumber(const std::string& phoneNumber)
 {
     for (size_t i = 0; i < phoneNumber.length(); ++i)
     {
         char c = phoneNumber[i];
-        if (!std::isdigit(c) && c != '+' && c != '-' && c != ' ')
-            return false;
+        if (!std::isdigit(c))
+            return ERROR;
     }
-    return true;
+    return 0;
 }
 
 int Contact::setContact() 
@@ -44,7 +44,7 @@ int Contact::setContact()
         std::cout << "\n入力が正しくありません。" << std::endl;
         return ERROR;
     }
-    if (!isValidPhoneNumber(phoneNumber))
+    if (isValidPhoneNumber(phoneNumber))
     {
         std::cout << "\n電話番号が正しくありません。" << std::endl;
         return ERROR;
