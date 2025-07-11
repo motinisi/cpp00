@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nisi <nisi@student.42.fr>                  +#+  +:+       +#+         #
+#    By: timanish <timanish@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/10 15:29:33 by nisi              #+#    #+#              #
-#    Updated: 2025/04/10 15:34:06 by nisi             ###   ########.fr        #
+#    Updated: 2025/07/11 14:16:03 by timanish         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = PhoneBook
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp \
-	contact.cpp \
+	Contact.cpp \
 	PhoneBook.cpp \
 
 OBJ = $(SRC:.cpp=.o)
